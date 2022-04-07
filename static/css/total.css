@@ -36529,49 +36529,7 @@ a.u-link.u-text-hover-grey-90:hover {
   min-height: 72px;
 }
 
-.u-header .u-btn-1 {
-  border-style: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  margin: 15px 161px 0 auto;
-}
 
-.u-header .u-btn-2 {
-  border-style: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  margin: -42px 15px 0 auto;
-}
-
-.u-header .u-btn-3 {
-  border-style: none;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  letter-spacing: 1px;
-  font-weight: 700;
-  margin: -42px 363px 0 auto;
-}
-
-.u-header .u-text-1 {
-  margin: -37px auto 20px 0;
-}
-@media (max-width: 1199px) {
-  .u-header .u-btn-1 {
-    margin-right: 0;
-  }
-
-  .u-header .u-btn-2 {
-    margin-right: 0;
-  }
-
-  .u-header .u-btn-3 {
-    margin-right: 163px;
-  }
-}
 @media (max-width: 991px) {
   .u-header .u-btn-3 {
     margin-right: 0;

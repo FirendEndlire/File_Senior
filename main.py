@@ -1,12 +1,10 @@
 import os
-from datetime import datetime
 from werkzeug.utils import redirect
 from data import db_session
 from data.users import User
 from flask_login import LoginManager, login_user, login_required, logout_user
 from forms.login import LoginForm
 from forms.registation import RegisterForm
-from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, session, render_template
 
 app = Flask(__name__)
@@ -88,5 +86,3 @@ def load_user(user_id):
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-    session.permanent = True
-    session['login'] = None
