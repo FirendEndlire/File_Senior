@@ -9,7 +9,7 @@
 .u-section-1 .u-group-1 {
   width: 906px;
   min-height: 106px;
-  background-image: linear-gradient(45deg, #f1b5b8, #e68387);
+  background-image: linear-gradient(45deg, #adcce9, #adf6f2);
   margin: 34px auto 0;
 }
 
@@ -24,7 +24,7 @@
 
 .u-section-1 .u-form-1 {
   height: 439px;
-  background-image: linear-gradient(#e68387, #f1b5b8);
+  background-image: linear-gradient(#adcce9, #adf6f2);
   width: 570px;
   margin: 117px auto 0;
 }
@@ -59,7 +59,7 @@
 
 .u-section-1 .u-btn-1 {
   border-style: none;
-  background-image: linear-gradient(135deg, #adf6f2, #e68387);
+  background-image: linear-gradient(135deg, #ff0000, #ff0000);
 }
 
 @media (max-width: 1199px) {
