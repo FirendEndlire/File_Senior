@@ -15,7 +15,7 @@ def registration_page():
 
 @app.route('/log_in_page')
 def log_in_page():
-    return render_template('Log_in.html')
+    return render_template('Login.html')
 
 
 @app.route('/converter_page')
