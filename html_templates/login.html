@@ -1,0 +1,50 @@
+{% extends "Base.html" %}
+
+
+{% block content %}
+<link rel="stylesheet" href="../static_content/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="../static_content/css/Login.css" media="screen">
+</head>
+<body class="u-body u-xl-mode">
+<section class="skrollable u-align-center u-clearfix u-gradient u-section-1" src="" id="sec-00ae">
+    <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <div class="u-container-style u-gradient u-group u-radius-36 u-shape-round u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+                <h1 class="u-custom-font u-font-roboto-slab u-text u-text-1">Вход в свой аккаунт</h1>
+            </div>
+        </div>
+        <div class="u-form u-gradient u-radius-28 u-form-1">
+                <form action="" method="post" class="u-clearfix u-form-spacing-44 u-form-vertical u-inner-form"
+                  source="custom" name="form" style="padding: 10px;">
+                    {{ form.hidden_tag() }}
+                    <div class="u-form-group u-form-name u-label-top">
+                        {{ form.login.label }}<br>
+                        {{ form.login(class="form-control") }}<br>
+                        {% for error in form.login.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="u-form-group u-label-top u-form-group-2">
+                        {{ form.password.label }}<br>
+                        {{ form.password(class="form-control", type="password") }}<br>
+                        {% for error in form.password.errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="u-align-center u-form-group u-form-submit u-label-top">
+                        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                        <div>{{ message }}</div>
+                    </div>
+                </form>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
+{% endblock %}
