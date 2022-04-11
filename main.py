@@ -21,7 +21,6 @@ login_manager.init_app(app)
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 db_session.global_init("data_bases/users.db")
 
-
 @app.route("/")
 def index():
     return render_template('Start.html', title='File Senior', page='File Senior')
