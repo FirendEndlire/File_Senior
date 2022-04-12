@@ -1,6 +1,7 @@
 import os
 import logging
 import flask_login
+from flask_uploads import UploadSet, configure_uploads, patch_request_class
 from werkzeug.utils import redirect
 from data_orm import db_session
 from data_orm.users import User
@@ -9,17 +10,28 @@ from forms_templates.login import LoginForm
 from forms_templates.registation import RegisterForm
 from forms_templates.change_login import NewLoginForm
 from forms_templates.change_password import NewPasswordForm
+from forms_templates.file_load import FileLoad
+from werkzeug.datastructures import FileStorage
 from flask import Flask, render_template, request
 
 app = Flask(__name__, template_folder="html_templates", static_folder="static_content")
+basedir = os.path.abspath(os.path.dirname(__file__))
 login_manager = LoginManager()
+login_manager.init_app(app)
 logging.basicConfig(
     filename='example.log',
     format='%(asctime)s %(levelname)s %(name)s %(message)s'
 )
-login_manager.init_app(app)
+app.config['UPLOADS_DEFAULT_DEST'] = os.path.realpath('.') + '/uploads_files'  # Мы указываем папки для сохранения
+app.config['UPLOADED_PHOTOS_ALLOW'] = set(['png', 'jpg', 'jpeg', 'pdf'])  # Разрешенные форматы
+app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # Размер в байтах
+files = UploadSet(
+    'photos')  # Понятия не имею почему это работает, но это работает только так. TODO Сделать нормальную папку для сохранения
+configure_uploads(app, files)  # Это тоже я просто скопипастил. Далее читай с строки 90
+patch_request_class(app)
 app.config['SECRET_KEY'] = os.urandom(12).hex()
 db_session.global_init("data_bases/users.db")
+
 
 @app.route("/")
 def index():
@@ -72,9 +84,16 @@ def regestration():
     return render_template('registration.html', title='Регистрация', page='File Senior', form=form)
 
 
-@app.route("/convert")
+@app.route("/convert", methods=['GET', 'POST'])
 def convert():
-    return render_template('Converter.html', title='Конвертирование', page='File Senior')
+    form = FileLoad()
+    if form.validate_on_submit():
+        filename = files.save(FileStorage(None,
+                                          form.file.data))  # Тут самое сложное. Обращаемся к форме, забираем из формы файл и оборачиваем в FileStorage чтобы flask_upload читал. Сохраняем.
+        file_url = files.url(filename)  # Это вроде создает ссылку на файл, это на будущее. TODO Потестить
+    else:
+        file_url = None
+    return render_template('Converter.html', form=form, file_url=file_url)
 
 
 @app.route("/personal_page")

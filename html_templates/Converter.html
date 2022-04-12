@@ -2,57 +2,46 @@
 
 
 {% block content %}
-    <link rel="stylesheet" href="../static_content/css/nicepage.css" media="screen">
+<link rel="stylesheet" href="../static_content/css/nicepage.css" media="screen">
 <link rel="stylesheet" href="../static_content/css/Converter.css" media="screen">
-  </head>
-  <body class="u-body u-xl-mode"> 
-    <section class="skrollable u-align-center u-clearfix u-gradient u-section-1" src="" id="sec-00ae">
-      <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+</head>
+<body class="u-body u-xl-mode">
+<section class="skrollable u-align-center u-clearfix u-gradient u-section-1" src="" id="sec-00ae">
+    <div class="u-align-left u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-gradient u-group u-radius-36 u-shape-round u-group-1">
-          <div class="u-container-layout u-container-layout-1">
-            <h1 class="u-custom-font u-font-roboto-slab u-text u-text-1">Конвертирование</h1>
-          </div>
+            <div class="u-container-layout u-container-layout-1">
+                <h1 class="u-custom-font u-font-roboto-slab u-text u-text-1">Конвертирование</h1>
+            </div>
         </div>
         <div class="u-form u-gradient u-radius-28 u-form-1">
-          <form action="#" method="POST" class="u-clearfix u-form-horizontal u-form-spacing-44 u-inner-form" source="custom" name="form" style="padding: 10px;">
-            <div class="u-form-group u-form-select u-label-top u-form-group-1">
-              <label for="select-50e8" class="u-custom-font u-font-roboto-slab u-label">Изначальный формат файла</label>
-              <div class="u-form-select-wrapper">
-                <select id="select-50e8" name="select" class="u-border-4 u-border-palette-4-light-2 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius-12 u-white u-input-1">
-                  <option value="Item 1">Item 1</option>
-                  <option value="Item 2">Item 2</option>
-                  <option value="Item 3">Item 3</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
-              </div>
-            </div>
-            <div class="u-form-group u-form-select u-label-top u-form-group-2">
-              <label for="select-60a0" class="u-custom-font u-font-roboto-slab u-label">Итоговый формат файла</label>
-              <div class="u-form-select-wrapper">
-                <select id="select-60a0" name="select-1" class="u-border-4 u-border-palette-4-light-2 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius-12 u-white u-input-2">
-                  <option value="Item 1">Item 1</option>
-                  <option value="Item 2">Item 2</option>
-                  <option value="Item 3">Item 3</option>
-                </select>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" version="1" class="u-caret"><path fill="currentColor" d="M4 8L0 4h8z"></path></svg>
-              </div>
-            </div>
-            <div class="u-form-group u-label-top u-form-group-3">
-              <label for="text-b954" class="u-custom-font u-font-roboto-slab u-label">ЗАМЕНИТЬ НА ВЫБОР ФАЙЛА</label>
-              <input type="text" placeholder="" id="text-b954" name="text" class="u-border-4 u-border-palette-4-light-2 u-custom-font u-font-roboto-slab u-input u-input-rectangle u-radius-12 u-white u-input-3">
-            </div>
-            <div class="u-align-center u-form-group u-form-submit u-label-top">
-              <input type="submit" value="submit" class="u-form-control-hidden">
-              <a href="#" class="u-btn u-btn-round u-btn-submit u-button-style u-custom-font u-font-roboto-slab u-gradient u-none u-radius-12 u-btn-1">Отправить</a>
-            </div>
-            <div class="u-form-send-message u-form-send-success"> Спасибо! Ваше сообщение отправлено. </div>
-            <div class="u-form-send-error u-form-send-message"> Отправка не удалась. Пожалуйста, исправьте ошибки и попробуйте еще раз. </div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
+            <form action="" method="post" class="u-clearfix u-form-horizontal u-form-spacing-44 u-inner-form"
+                  source="custom" name="form" style="padding: 10px;">
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.file.label }}<br>
+                    {{ form.file(class="form-control") }}<br>
+                    {% for error in form.file.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+                {% endfor %}
+                </p>
+                <p>
+                    {{ form.select.label }}<br>
+                    {{ form.select(class="form-control") }}<br>
+                    {% for error in form.select.errors %}
+                <p class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+                {% endfor %}
+                </p>
+                <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                {{message}}
+            </form>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-  </body>
+</body>
 </html>
 {% endblock %}

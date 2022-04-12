@@ -32,13 +32,10 @@
 <header class="u-clearfix u-grey-80 u-header u-header" id="sec-859c">
     <div class="u-clearfix u-sheet u-sheet-1">
         {% if current_user.is_authenticated %}
-        <a href="/logout"
-           class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Выйти</a>
-        <a href="/personal_page"
-           class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-2">{{
-            current_user.login }}</a>
         <a href="/convert"
-           class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">Конвертировать</a>
+           class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Конвертировать</a>
+        <a href="/personal_page"
+           class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">Настройки вашего аккаунта</a>
         {% else %}
         <a href="/registration"
            class="u-btn u-btn-round u-button-style u-custom-font u-font-roboto-slab u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-1">Регистрация</a>
