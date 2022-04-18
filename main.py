@@ -1,122 +1,123 @@
 import os
-import logging
-import flask_login
-from flask_uploads import UploadSet, configure_uploads, patch_request_class, UploadNotAllowed
-from werkzeug.utils import redirect
-from data_orm import db_session
-from data_orm.users import User
-from flask_login import LoginManager, login_user, login_required, logout_user
+import logging  # логирование
+from flask_uploads import UploadSet, configure_uploads, patch_request_class, UploadNotAllowed  # Библиотека для загрузки файлов
+from werkzeug.utils import redirect  # переадресация
+from data_orm import db_session  # орм модели
+from data_orm.users import User  # орм модель пользоаптеля
+from flask_login import LoginManager, login_user, login_required, logout_user, current_user  # Регистрация пользователя
 from forms_templates.login import LoginForm
 from forms_templates.registation import RegisterForm
 from forms_templates.change_login import NewLoginForm
 from forms_templates.change_password import NewPasswordForm
-from forms_templates.file_load import FileLoad
-from werkzeug.datastructures import FileStorage
-from flask import Flask, render_template, request
+from forms_templates.file_load import FileLoad  # Все это формы для регистрации, входа и т. д.
+from werkzeug.datastructures import FileStorage  # Это для загрузки файлов
+from flask import Flask, render_template, request  # Ну и сам фласк
 
-app = Flask(__name__, template_folder="html_templates", static_folder="static_content")
-basedir = os.path.abspath(os.path.dirname(__file__))
-login_manager = LoginManager()
-login_manager.init_app(app)
+app = Flask(__name__, template_folder="html_templates", static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
+basedir = os.path.abspath(os.path.dirname(__file__))  # Указывем базавую дирекорию
+login_manager = LoginManager()  # Логин
+login_manager.init_app(app)  # Инициация логина
 logging.basicConfig(
     filename='example.log',
     format='%(asctime)s %(levelname)s %(name)s %(message)s'
-)
+)  # Логирование
 app.config['UPLOADS_DEFAULT_DEST'] = os.path.realpath('.')  # Мы указываем путь для сохранения
-app.config['UPLOADED_MATERIALS_ALLOW'] = set(['png', 'jpg', 'jpeg', 'pdf'])  # Разрешенные форматы
+app.config['UPLOADED_MATERIALS_ALLOW'] = set(['png', 'jpg', 'jpeg'])  # Разрешенные форматы
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # Размер в байтах
 files = UploadSet('MATERIALS')  # Указываем папку
-configure_uploads(app, files)  # Это я просто скопипастил. Далее читай с строки 90
-patch_request_class(app)
-app.config['SECRET_KEY'] = os.urandom(12).hex()
-db_session.global_init("data_bases/users.db")
+configure_uploads(app, files)  # Это я просто скопипастил
+patch_request_class(app)  # Инициализируем
+app.config['SECRET_KEY'] = os.urandom(12).hex()  # Создаем случайный ключ
+db_session.global_init("data_bases/users.db")  # Активируем орм
 
 
 @app.route("/")
-def index():
+def index():  # Стартовая страница
     return render_template('Start.html', title='File Senior', page='File Senior')
 
 
 @app.route("/login", methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        db_sess = db_session.create_session()
-        user = db_sess.query(User).filter(User.login == form.login.data).first()
-        if user and user.check_password(form.password.data):
-            login_user(user, remember=True)
-            return redirect("/personal_page")
+def login():  # Залогинивание
+    form = LoginForm()  # Создаем форму
+    if form.validate_on_submit():  # При нажатии на кнопку войти...
+        db_sess = db_session.create_session()  # Создаем сессию
+        user = db_sess.query(User).filter(User.login == form.login.data).first()  # Ищем пользователя по логину
+        if user and user.check_password(form.password.data):  # проверяем наличие пользователя и правильность пароля
+            login_user(user, remember=True)  # Лошинем юзера
+            return redirect("/personal_page")  # Перекидываем на персональную страницу
         return render_template('login.html', title='File Senior', page='Авторизация',
                                message="Неправильный логин или пароль",
-                               form=form)
+                               form=form)  # В случае ошибки сообщаем об этом
     return render_template('login.html', title='Авторизация', page='File Senior', form=form)
 
 
 @app.route('/logout')
 @login_required
-def logout():
+def logout():  # Выход
     logout_user()
     return redirect("/")
 
 
 @app.route("/registration", methods=['GET', 'POST'])
-def regestration():
-    form = RegisterForm()
-    if form.validate_on_submit():
-        if form.password.data != form.password_again.data:
+def regestration():  # Регистрация
+    form = RegisterForm()  # Форма
+    if form.validate_on_submit():  # При нажатии
+        if form.password.data != form.password_again.data:  # Если пароли не совподают
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
-                                   message="Пароли не совпадают")
-        db_sess = db_session.create_session()
-        if db_sess.query(User).filter(User.email == form.email.data).first():
+                                   message="Пароли не совпадают")  # Сообщаем об этом
+        db_sess = db_session.create_session()  # Сессия
+        if db_sess.query(User).filter(User.email == form.email.data).first():  # Проверка на наличие пользователя
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
-                                   message="Такой пользователь уже есть")
+                                   message="Такой пользователь уже есть")  # Сообщаем об этом
         user = User(
             login=form.login.data,
             email=form.email.data
-        )
-        user.set_password(form.password.data)
-        db_sess.add(user)
-        db_sess.commit()
-        return redirect('/login')
+        )  # Данные для сохранения
+        user.set_password(form.password.data)  # Задаем хеш-пароль
+        db_sess.add(user)  # Добавляем пользователя в базу
+        db_sess.commit()  # Сохраняем изменения
+        return redirect('/login')  # Перенаправяем на страницу входа
     return render_template('registration.html', title='Регистрация', page='File Senior', form=form)
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-def convert():
-    form = FileLoad()
-    try:
-        if form.validate_on_submit():
+@login_required
+def convert():  # Конвертация
+    form = FileLoad()  # Форма
+    try:  # Оно может упасть, это на всякий случай
+        if form.validate_on_submit():  # Нажатие
             filename = files.save(FileStorage(None,
-                                              form.file.data))  # Тут самое сложное. Обращаемся к форме, забираем из формы файл и оборачиваем в FileStorage чтобы flask_upload читал. Сохраняем.
+                                              form.file.data))  # Тут самое сложное. Обращаемся к форме, забираем из
+            # формы файл и оборачиваем в FileStorage чтобы flask_upload читал. Сохраняем.
             file_url = files.url(filename)  # Это создает ссылку, но почему то она не работает
         else:
-            file_url = None
-    except UploadNotAllowed:
-        return redirect('/convert#error')
+            file_url = None  # Чтоб не упало если нет файла
+    except UploadNotAllowed:  # Это исключение, оно выпадает, если с файлом что то не так
+        return redirect('/convert#error')  # Вызов сооющения об ошибке
     return render_template('Converter.html', form=form, file_url=file_url)
 
 
 @app.route("/personal_page")
 @login_required
-def personal_page():
+def personal_page():  # Персональная страница
     return render_template('Account.html', title='Личный кабинет', page='File Senior')
 
 
 @app.route("/change_login", methods=['GET', 'POST'])
 @login_required
-def change_login():
-    form = NewLoginForm()
-    if form.validate_on_submit() and request.method == 'POST':
-        db_sess = db_session.create_session()
-        user = db_sess.query(User).filter(User.login == flask_login.current_user.login).first()
-        if user and user.check_password(form.password.data):
-            user.login = form.login.data
-            db_sess.commit()
-            return redirect("/personal_page")
+def change_login():  # Смена логина
+    form = NewLoginForm()  # Форма
+    if form.validate_on_submit() and request.method == 'POST':  # Нажатие
+        db_sess = db_session.create_session()  # Сессия
+        user = db_sess.query(User).filter(User.login == current_user.login).first()  # Находим зареганого юзера
+        if user and user.check_password(form.password.data):  # Проверяем логин и пароль
+            user.login = form.login.data  # Новый логин
+            db_sess.commit()  # Сохраняем
+            return redirect("/personal_page")  # Обратно на страницу
         else:
-            return redirect('/personal_page#error')
+            return redirect('/personal_page#error')  # Обратно на страницу, но с ошибкой
     return render_template('Change_login.html',
                            title='Редактирование пароля',
                            form=form)
@@ -124,17 +125,18 @@ def change_login():
 
 @app.route("/change_password", methods=['GET', 'POST'])
 @login_required
-def change_password():
-    form = NewPasswordForm()
-    if form.validate_on_submit() and request.method == 'POST':
-        db_sess = db_session.create_session()
-        user = db_sess.query(User).filter(User.login == flask_login.current_user.login).first()
-        if user and user.check_password(form.OldPassword.data) and form.NewPassword.data == form.AgainNewPassword.data:
-            user.set_password(form.NewPassword.data)
-            db_sess.commit()
+def change_password():  # Изменить пароль
+    form = NewPasswordForm()  # Форма
+    if form.validate_on_submit() and request.method == 'POST':  # при нажатии
+        db_sess = db_session.create_session()  # Сессия
+        user = db_sess.query(User).filter(User.login == current_user.login).first()  # Юзер
+        if user and user.check_password(form.OldPassword.data) \
+                and form.NewPassword.data == form.AgainNewPassword.data:  # Пароли подходят?
+            user.set_password(form.NewPassword.data)  # Меняем пароль
+            db_sess.commit()  # Сохрняем
             return redirect("/personal_page")
         else:
-            return redirect('/personal_page#error')
+            return redirect('/personal_page#error')  # Падаем с ошибкой
     return render_template('Change_password.html',
                            title='Редактирование пароля',
                            form=form)
@@ -142,25 +144,25 @@ def change_password():
 
 @app.route("/delete_account/<string:login>")
 @login_required
-def delete_account(login):
-    db_sess = db_session.create_session()
+def delete_account(login):  # Удаление аккаунта
+    db_sess = db_session.create_session()  # Сессия
     account = db_sess.query(User).filter(User.login == login,
-                                         User.login == flask_login.current_user.login
-                                         ).first()
-    if account:
-        db_sess.delete(account)
-        db_sess.commit()
+                                         User.login == current_user.login
+                                         ).first()  # Текущий Юзер
+    if account:  # Можно удалить только свой аккаунт
+        db_sess.delete(account)  # Удаляем
+        db_sess.commit()  # Сохраняем
     else:
-        return redirect('/personal_page#error')
+        return redirect('/personal_page#error')  # Ошибка
     return redirect('/')
 
 
 @login_manager.user_loader
-def load_user(user_id):
+def load_user(user_id):  # Загрузка пользователя
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
 
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port)  # Запускаем

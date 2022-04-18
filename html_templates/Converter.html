@@ -17,7 +17,7 @@
             <form action="" method="post" class="u-clearfix u-form-horizontal u-form-spacing-44 u-inner-form"
                   source="custom" name="form" style="padding: 10px;">
                 {{ form.hidden_tag() }}
-                <p>
+                <p class="u-form-group u-form-select u-label-left u-form-group-1">
                     {{ form.file.label }}<br>
                     {{ form.file(class="form-control") }}<br>
                     {% for error in form.file.errors %}
@@ -26,16 +26,7 @@
                 </p>
                 {% endfor %}
                 </p>
-                <p>
-                    {{ form.select.label }}<br>
-                    {{ form.select(class="form-control") }}<br>
-                    {% for error in form.select.errors %}
-                <p class="alert alert-danger" role="alert">
-                    {{ error }}
-                </p>
-                {% endfor %}
-                </p>
-                <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+                <p class="u-form-group u-form-select u-label-right u-form-group-3">{{ form.submit(type="submit", class="btn btn-primary") }}</p>
                 {{message}}
             </form>
         </div>
