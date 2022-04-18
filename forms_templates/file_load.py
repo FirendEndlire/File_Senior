@@ -7,8 +7,8 @@ class FileLoad(FlaskForm):
     file = FileField('Файл')
     select = SelectField('Итоговое расширение файла', choices=[
         ("pdf", ".pdf"),
-        ("jpg", ".jpg"),
-        ("png", ".png"),
-        ("uploads", ".uploads"),
-        ("webp", ".webp")])
+        ("pdf", ".pdf"),
+        ("pdf", ".pdf"),
+        ("pdf", ".pdf"),
+        ("pdf", ".pdf")])
     submit = SubmitField('Upload')
