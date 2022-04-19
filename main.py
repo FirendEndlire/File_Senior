@@ -1,6 +1,7 @@
 import os
 import logging  # логирование
-from flask_uploads import UploadSet, configure_uploads, patch_request_class, UploadNotAllowed  # Библиотека для загрузки файлов
+from flask_uploads import UploadSet, configure_uploads, patch_request_class, \
+    UploadNotAllowed  # Библиотека для загрузки файлов
 from werkzeug.utils import redirect, secure_filename  # переадресация
 from data_orm import db_session  # орм модели
 from data_orm.users import User  # орм модель пользоаптеля
@@ -9,11 +10,10 @@ from forms_templates.login import LoginForm
 from forms_templates.registation import RegisterForm
 from forms_templates.change_login import NewLoginForm
 from forms_templates.change_password import NewPasswordForm
-from forms_templates.file_load import FileLoad  # Все это формы для регистрации, входа и т. д.
-from werkzeug.datastructures import FileStorage  # Это для загрузки файлов
 from flask import Flask, render_template, request  # Ну и сам фласк
 
-app = Flask(__name__, template_folder="html_templates", static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
+app = Flask(__name__, template_folder="html_templates",
+            static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
 basedir = os.path.abspath(os.path.dirname(__file__))  # Указывем базавую дирекорию
 login_manager = LoginManager()  # Логин
 login_manager.init_app(app)  # Инициация логина
@@ -21,12 +21,8 @@ logging.basicConfig(
     filename='example.log',
     format='%(asctime)s %(levelname)s %(name)s %(message)s'
 )  # Логирование
-app.config['UPLOADS_DEFAULT_DEST'] = os.path.realpath('.')  # Мы указываем путь для сохранения
-app.config['UPLOADED_MATERIALS_ALLOW'] = set(['png', 'jpg', 'jpeg'])  # Разрешенные форматы
 app.config['UPLOAD_FOLDER'] = 'MATERIALS'
-app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # Размер в байтах
-files = UploadSet('MATERIALS')  # Указываем папку
-configure_uploads(app, files)  # Это я просто скопипастил
+app.config['MAX_CONTENT_LENGTH'] = 1
 patch_request_class(app)  # Инициализируем
 app.config['SECRET_KEY'] = os.urandom(12).hex()  # Создаем случайный ключ
 db_session.global_init("data_bases/users.db")  # Активируем орм
@@ -87,12 +83,16 @@ def regestration():  # Регистрация
 # @login_required
 def convert():  # Конвертация
     if request.method == 'POST':  # Нажатие
-        try:  # Оно может упасть, это на всякий случай
-            file = request.files['file']
-            if file:
-                filename = secure_filename(file.filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        except UploadNotAllowed:  # Это исключение, оно выпадает, если с файлом что то не так
+        file = request.files['file']  # Получаем файл
+        if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
+                                                                "png", "tiff", "html"]:  # Проверяем наличие и формат
+            filename = secure_filename(file.filename)  # Имя файла получаем
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
+            if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
+                                    filename)).st_size > 5 * 1024 * 1024:  # Проверка на размер
+                os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
+                return redirect('/convert#error')  # Вызов сооющения об ошибке
+        else:
             return redirect('/convert#error')  # Вызов сооющения об ошибке
     return render_template('Converter.html')
 
