@@ -1,7 +1,7 @@
 import os
 import logging  # логирование
 from flask_uploads import UploadSet, configure_uploads, patch_request_class, UploadNotAllowed  # Библиотека для загрузки файлов
-from werkzeug.utils import redirect  # переадресация
+from werkzeug.utils import redirect, secure_filename  # переадресация
 from data_orm import db_session  # орм модели
 from data_orm.users import User  # орм модель пользоаптеля
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user  # Регистрация пользователя
@@ -23,6 +23,7 @@ logging.basicConfig(
 )  # Логирование
 app.config['UPLOADS_DEFAULT_DEST'] = os.path.realpath('.')  # Мы указываем путь для сохранения
 app.config['UPLOADED_MATERIALS_ALLOW'] = set(['png', 'jpg', 'jpeg'])  # Разрешенные форматы
+app.config['UPLOAD_FOLDER'] = 'MATERIALS'
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # Размер в байтах
 files = UploadSet('MATERIALS')  # Указываем папку
 configure_uploads(app, files)  # Это я просто скопипастил
@@ -83,20 +84,17 @@ def regestration():  # Регистрация
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-@login_required
+# @login_required
 def convert():  # Конвертация
-    form = FileLoad()  # Форма
-    try:  # Оно может упасть, это на всякий случай
-        if form.validate_on_submit():  # Нажатие
-            filename = files.save(FileStorage(None,
-                                              form.file.data))  # Тут самое сложное. Обращаемся к форме, забираем из
-            # формы файл и оборачиваем в FileStorage чтобы flask_upload читал. Сохраняем.
-            file_url = files.url(filename)  # Это создает ссылку, но почему то она не работает
-        else:
-            file_url = None  # Чтоб не упало если нет файла
-    except UploadNotAllowed:  # Это исключение, оно выпадает, если с файлом что то не так
-        return redirect('/convert#error')  # Вызов сооющения об ошибке
-    return render_template('Converter.html', form=form, file_url=file_url)
+    if request.method == 'POST':  # Нажатие
+        try:  # Оно может упасть, это на всякий случай
+            file = request.files['file']
+            if file:
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        except UploadNotAllowed:  # Это исключение, оно выпадает, если с файлом что то не так
+            return redirect('/convert#error')  # Вызов сооющения об ошибке
+    return render_template('Converter.html')
 
 
 @app.route("/personal_page")
