@@ -1015,7 +1015,6 @@ ol {
 .u-btn {
   /*display: inline-block;*/
   display: table;
-  /*TODO maye need another solution for negative marin*/
   cursor: pointer;
   color: inherit;
   font-size: inherit;
@@ -36712,7 +36711,7 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 0.875rem;
   letter-spacing: 1px;
   font-weight: 700;
-  margin: 15px 401px 0 auto;
+  margin: 15px 300px 0 auto;
 }
 
 .u-header .u-btn-2 {
@@ -36721,7 +36720,7 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 0.875rem;
   letter-spacing: 1px;
   font-weight: 700;
-  margin: -42px 247px 0 auto;
+  margin: -42px 175px 0 auto;
 }
 
 .u-header .u-btn-3 {
@@ -36730,7 +36729,7 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 0.875rem;
   letter-spacing: 1px;
   font-weight: 700;
-  margin: -42px 0 0 auto;
+  margin: -42px -50px 0 auto;
 }
 
 .u-header .u-text-1 {
@@ -36792,6 +36791,45 @@ a.u-link.u-text-hover-grey-90:hover {
     width: 340px;
   }
 }
+
+#error {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #okno {
+        width: 300px;
+        height: 128px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #478acf;
+        border-radius: 10px;
+        color: #000000;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 1000;
+        left: 0;
+        margin: auto;
+        background: #478fff;
+      }
+      #error:target {display: block;}
+      .close {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+      .close:hover {background: #e6e6ff;}
 
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }

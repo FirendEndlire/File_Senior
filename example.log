@@ -1,0 +1,176 @@
+2022-04-19 12:42:54,721 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-19 12:43:03,560 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:03] "GET / HTTP/1.1" 200 -
+2022-04-19 12:43:03,591 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:03] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:03,591 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:03] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:03,594 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:03] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:08,592 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:08] "GET /registration HTTP/1.1" 200 -
+2022-04-19 12:43:08,608 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:08] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:08,610 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:08] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:08,610 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:08] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:15,473 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:15] "[32mPOST /registration HTTP/1.1[0m" 302 -
+2022-04-19 12:43:15,480 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:15] "GET /login HTTP/1.1" 200 -
+2022-04-19 12:43:15,498 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:15] "GET /static_content/css/Login.css HTTP/1.1" 200 -
+2022-04-19 12:43:15,499 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:15] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:15,501 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:15] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:19,754 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-19 12:43:19,761 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:19] "GET /personal_page HTTP/1.1" 200 -
+2022-04-19 12:43:19,775 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:19] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:19,776 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:19] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:19,778 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:19] "GET /static_content/css/Account.css HTTP/1.1" 200 -
+2022-04-19 12:43:22,925 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:22] "GET /convert HTTP/1.1" 200 -
+2022-04-19 12:43:22,947 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:22] "GET /static_content/css/Converter.css HTTP/1.1" 200 -
+2022-04-19 12:43:22,947 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:22] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:22,949 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:22] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:28,224 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:28] "POST /convert HTTP/1.1" 200 -
+2022-04-19 12:43:28,242 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:28] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:28,243 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:28] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:43:28,244 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:43:28] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 12:54:23,970 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:54:23] "POST /convert HTTP/1.1" 200 -
+2022-04-19 12:54:23,992 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:54:23] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 12:54:23,996 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:54:23] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 12:54:23,996 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 12:54:23] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:14,662 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-19 13:04:19,242 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:19] "GET / HTTP/1.1" 200 -
+2022-04-19 13:04:19,274 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:19] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:19,275 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:19] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:19,277 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:19] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:20,918 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:20] "GET /login HTTP/1.1" 200 -
+2022-04-19 13:04:20,937 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:20] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:20,939 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:20] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:20,940 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:20] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:24,240 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-19 13:04:24,247 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:24] "GET /personal_page HTTP/1.1" 200 -
+2022-04-19 13:04:24,268 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:24] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:24,270 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:24] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:24,271 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:24] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:28,102 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:28] "GET /convert HTTP/1.1" 200 -
+2022-04-19 13:04:28,119 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:28] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:28,124 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:28] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:04:28,125 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:28] "GET /static_content/css/Converter.css HTTP/1.1" 200 -
+2022-04-19 13:04:34,056 ERROR main Exception on /convert [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_login\utils.py", line 277, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "e:/Programms Codes/File_Senior/main.py", line 98, in convert
+    return render_template('Converter.html', form=form, file_url=file_url)
+UnboundLocalError: local variable 'file_url' referenced before assignment
+2022-04-19 13:04:34,057 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:34] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2022-04-19 13:04:47,743 ERROR main Exception on /convert [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_login\utils.py", line 277, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "e:/Programms Codes/File_Senior/main.py", line 98, in convert
+    return render_template('Converter.html', form=form, file_url=file_url)
+UnboundLocalError: local variable 'file_url' referenced before assignment
+2022-04-19 13:04:47,745 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:04:47] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2022-04-19 13:04:54,071 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-19 13:05:01,129 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:01] "GET / HTTP/1.1" 200 -
+2022-04-19 13:05:01,155 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:01] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:01,156 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:01] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:01,157 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:01] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:03,332 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:03] "GET /login HTTP/1.1" 200 -
+2022-04-19 13:05:03,350 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:03] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:03,353 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:03] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:03,353 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:03] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:06,398 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-19 13:05:06,405 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:06] "GET /personal_page HTTP/1.1" 200 -
+2022-04-19 13:05:06,421 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:06] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:06,421 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:06] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:06,422 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:06] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:07,549 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:07] "GET /convert HTTP/1.1" 200 -
+2022-04-19 13:05:07,567 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:07] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:07,567 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:07] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:07,570 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:07] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:12,474 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:12] "POST /convert HTTP/1.1" 200 -
+2022-04-19 13:05:12,492 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:12] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:12,494 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:12] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:05:12,495 INFO werkzeug 192.168.50.171 - - [19/Apr/2022 13:05:12] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:50,292 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-19 13:08:54,165 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:54] "GET / HTTP/1.1" 200 -
+2022-04-19 13:08:54,205 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:54] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:54,207 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:54] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:54,208 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:54] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:55,548 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:55] "GET /login HTTP/1.1" 200 -
+2022-04-19 13:08:55,566 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:55] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:55,569 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:55] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:08:55,570 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:08:55] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:00,783 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:00] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-19 13:09:00,791 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:00] "GET /personal_page HTTP/1.1" 200 -
+2022-04-19 13:09:00,808 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:00] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:00,809 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:00] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:00,810 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:00] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:02,108 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:02] "GET /convert HTTP/1.1" 200 -
+2022-04-19 13:09:02,128 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:02] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:02,131 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:02] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:02,132 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:02] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 13:09:06,003 ERROR main Exception on /convert [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_login\utils.py", line 277, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "e:/Programms Codes/File_Senior/main.py", line 91, in convert
+    filename = files.save("MATERIALS", form.file.data)  # Тут самое сложное. Обращаемся к форме, забираем из
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask_uploads.py", line 405, in save
+    raise TypeError("storage must be a werkzeug.FileStorage")
+TypeError: storage must be a werkzeug.FileStorage
+2022-04-19 13:09:06,004 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:09:06] "[35m[1mPOST /convert HTTP/1.1[0m" 500 -
+2022-04-19 13:13:21,145 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-19 13:13:26,127 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:26] "GET / HTTP/1.1" 200 -
+2022-04-19 13:13:26,167 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:26] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:26,169 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:26] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:26,170 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:26] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:27,797 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:27] "GET /login HTTP/1.1" 200 -
+2022-04-19 13:13:27,811 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:27] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:27,814 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:27] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:27,814 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:27] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:31,104 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-19 13:13:31,112 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:31] "GET /personal_page HTTP/1.1" 200 -
+2022-04-19 13:13:31,131 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:31] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:31,133 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:31] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:31,134 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:31] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:32,568 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:32] "GET /convert HTTP/1.1" 200 -
+2022-04-19 13:13:32,588 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:32] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:32,589 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:32] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:32,589 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:32] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:41,956 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:41] "POST /convert HTTP/1.1" 200 -
+2022-04-19 13:13:41,976 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:41] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:41,978 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:41] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-19 13:13:41,981 INFO werkzeug 127.0.0.1 - - [19/Apr/2022 13:13:41] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
