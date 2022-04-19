@@ -82,23 +82,26 @@ def regestration():  # Регистрация
 @app.route("/convert", methods=['GET', 'POST'])
 # @login_required
 def convert():  # Конвертация
-    if request.method == 'POST':  # Нажатие
-        file = request.files['file']  # Получаем файл
-        if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
-                                                                "png", "tiff", "html"]:  # Проверяем наличие и формат
-            filename = secure_filename(file.filename)  # Имя файла получаем
-            
-            if file.filename.rsplit('.', 1)[0] != filename: 
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], "file" + "." + file.filename.rsplit('.', 1)[1]))
+    try:
+        if request.method == 'POST':  # Нажатие
+            file = request.files['file']  # Получаем файл
+            if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
+                                                                    "png", "tiff", "html"]:  # Проверяем наличие и формат
+                filename = secure_filename(file.filename)  # Имя файла получаем
+                
+                if (file.filename ) != filename: 
+                    print(file.filename  , filename)
+                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], "file" + "." + file.filename.rsplit('.', 1)[1]))
+                else:
+                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
+                print (file.filename)
+                if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
+                                        filename)).st_size > 5 * 1024 * 1024:  # Проверка на размер
+                    os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
+                    return redirect('/convert#error')  # Вызов сооющения об ошибке
             else:
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
-            print (file.filename)
-            if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
-                                    filename)).st_size > 5 * 1024 * 1024:  # Проверка на размер
-                os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
-        else:
-            return redirect('/convert#error')  # Вызов сооющения об ошибке
+    except: pass
     return render_template('Converter.html')
 
 
