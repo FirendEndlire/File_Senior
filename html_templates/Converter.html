@@ -14,20 +14,9 @@
             </div>
         </div>
         <div class="u-form u-gradient u-radius-28 u-form-1">
-            <form action="" method="post" class="u-clearfix u-form-horizontal u-form-spacing-44 u-inner-form"
-                  source="custom" name="form" style="padding: 10px;">
-                {{ form.hidden_tag() }}
-                <p class="u-form-group u-form-select u-label-left u-form-group-1">
-                    {{ form.file.label }}<br>
-                    {{ form.file(class="form-control") }}<br>
-                    {% for error in form.file.errors %}
-                <p class="alert alert-danger" role="alert">
-                    {{ error }}
-                </p>
-                {% endfor %}
-                </p>
-                <p class="u-form-group u-form-select u-label-right u-form-group-3">{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-                {{message}}
+            <form method=post enctype=multipart/form-data>
+                <input type=file name=file>
+                <input type=submit value=Upload>
             </form>
         </div>
     </div>
