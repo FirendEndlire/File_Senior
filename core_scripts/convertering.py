@@ -8,9 +8,9 @@ def conv_to_pdf(material_file):
     elif material_file.rsplit('.', 1)[1].lower() in ["jpg", "png", "tiff", "html"]:
         file_type_key = "file"
         file_type_value = "image"
-    elif material_file.rsplit('.', 1)[1].lower() in ["html"]:
+    """elif material_file.rsplit('.', 1)[1].lower() in ["html"]:
         file_type_key = "html"
-        file_type_value = "index.html"
+        file_type_value = material_file"""
     instructions = {
     'parts': [
         {
@@ -40,6 +40,7 @@ def conv_to_pdf(material_file):
                 fd.write(chunk)
         return('CONV_RESULTS/'+material_file.rsplit('.', 1)[0].lower()+'.pdf')
     else:
+        print(material_file)
         return("ERROR")
         print(response.text)
         exit()

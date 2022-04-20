@@ -1,7 +1,6 @@
 import os
 import logging  # логирование
-from flask_uploads import UploadSet, configure_uploads, patch_request_class, \
-    UploadNotAllowed  # Библиотека для загрузки файлов
+from flask_uploads import patch_request_class  # Библиотека для загрузки файлов
 from werkzeug.utils import redirect, secure_filename  # переадресация
 from data_orm import db_session  # орм модели
 from data_orm.users import User  # орм модель пользоаптеля
@@ -10,7 +9,8 @@ from forms_templates.login import LoginForm
 from forms_templates.registation import RegisterForm
 from forms_templates.change_login import NewLoginForm
 from forms_templates.change_password import NewPasswordForm
-from flask import Flask, render_template, request  # Ну и сам фласк
+from flask import Flask, render_template, request, send_file  # Ну и сам фласк
+from core_scripts.convertering import conv_to_pdf
 
 app = Flask(__name__, template_folder="html_templates",
             static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
@@ -80,29 +80,29 @@ def regestration():  # Регистрация
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-# @login_required
+@login_required
 def convert():  # Конвертация
     try:
         if request.method == 'POST':  # Нажатие
             file = request.files['file']  # Получаем файл
             if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
-                                                                    "png", "tiff", "html"]:  # Проверяем наличие и формат
+                                                                    "png", "tiff"] and file.filename == secure_filename(
+                file.filename):  # Проверяем наличие и формат
                 filename = secure_filename(file.filename)  # Имя файла получаем
-                
-                if (file.filename ) != filename: 
-                    print(file.filename  , filename)
-                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], "file" + "." + file.filename.rsplit('.', 1)[1]))
-                else:
-                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
-                print (file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
                 if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
-                                        filename)).st_size > 5 * 1024 * 1024:  # Проверка на размер
+                                        filename)).st_size > 100 * 1024 * 1024:  # Проверка на размер
                     os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
                     return redirect('/convert#error')  # Вызов сооющения об ошибке
+                conv_ret = conv_to_pdf(filename)
+                if(conv_ret != "ERROR"):
+                    return send_file(conv_ret)
+                else:
+                    return redirect('/convert#error')
             else:
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
-    except: pass
-    return render_template('Converter.html')
+        return render_template('Converter.html')
+    except: return redirect('/convert#error')
 
 
 @app.route("/personal_page")
