@@ -9,7 +9,8 @@ from forms_templates.login import LoginForm
 from forms_templates.registation import RegisterForm
 from forms_templates.change_login import NewLoginForm
 from forms_templates.change_password import NewPasswordForm
-from flask import Flask, render_template, request  # Ну и сам фласк
+from flask import Flask, render_template, request, send_file  # Ну и сам фласк
+from core_scripts.convertering import conv_to_pdf
 
 app = Flask(__name__, template_folder="html_templates",
             static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
@@ -54,48 +55,56 @@ def logout():  # Выход
     return redirect("/")
 
 
+
 @app.route("/registration", methods=['GET', 'POST'])
 def regestration():  # Регистрация
     form = RegisterForm()  # Форма
     if form.validate_on_submit():  # При нажатии
+        db_sess = db_session.create_session()  # Сессия
         if form.password.data != form.password_again.data:  # Если пароли не совподают
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Пароли не совпадают")  # Сообщаем об этом
-        db_sess = db_session.create_session()  # Сессия
-        if db_sess.query(User).filter(User.email == form.email.data).first():  # Проверка на наличие пользователя
+        elif db_sess.query(User).filter(User.email == form.email.data).first() or db_sess.query(User).filter(User.login == form.login.data).first():  # Проверка на наличие пользователя
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Такой пользователь уже есть")  # Сообщаем об этом
-        user = User(
-            login=form.login.data,
-            email=form.email.data
-        )  # Данные для сохранения
-        user.set_password(form.password.data)  # Задаем хеш-пароль
-        db_sess.add(user)  # Добавляем пользователя в базу
-        db_sess.commit()  # Сохраняем изменения
-        return redirect('/login')  # Перенаправяем на страницу входа
+        else:
+            user = User(
+                login=form.login.data,
+                email=form.email.data
+            )  # Данные для сохранения
+            user.set_password(form.password.data)  # Задаем хеш-пароль
+            db_sess.add(user)  # Добавляем пользователя в базу
+            db_sess.commit()  # Сохраняем изменения
+            return redirect('/login')  # Перенаправяем на страницу входа
     return render_template('registration.html', title='Регистрация', page='File Senior', form=form)
 
 
 @app.route("/convert", methods=['GET', 'POST'])
 @login_required
 def convert():  # Конвертация
-    if request.method == 'POST':  # Нажатие
-        file = request.files['file']  # Получаем файл
-        if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
-                                                                "png", "tiff",
-                                                                "html"] and file.filename == secure_filename(
-            file.filename):  # Проверяем наличие и формат
-            filename = secure_filename(file.filename)  # Имя файла получаем
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
-            if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
-                                    filename)).st_size > 100 * 1024 * 1024:  # Проверка на размер
-                os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
+    try:
+        if request.method == 'POST':  # Нажатие
+            file = request.files['file']  # Получаем файл
+            if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
+                                                                    "png", "tiff"] and file.filename == secure_filename(
+                file.filename):  # Проверяем наличие и формат
+                filename = secure_filename(file.filename)  # Имя файла получаем
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
+                if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
+                                        filename)).st_size > 100 * 1024 * 1024:  # Проверка на размер
+                    os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
+                    return redirect('/convert#error')  # Вызов сооющения об ошибке
+                conv_ret = conv_to_pdf(filename)
+                if(conv_ret != "ERROR"):
+                    return send_file(conv_ret)
+                else:
+                    return redirect('/convert#error')
+            else:
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
-        else:
-            return redirect('/convert#error')  # Вызов сооющения об ошибке
-    return render_template('Converter.html')
+        return render_template('Converter.html')
+    except: return redirect('/convert#error')
 
 
 @app.route("/personal_page")
