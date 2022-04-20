@@ -42,5 +42,4 @@ def conv_to_pdf(material_file):
     else:
         print(material_file)
         return("ERROR")
-        print(response.text)
-        exit()
+        

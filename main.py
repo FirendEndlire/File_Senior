@@ -55,32 +55,34 @@ def logout():  # Выход
     return redirect("/")
 
 
+
 @app.route("/registration", methods=['GET', 'POST'])
 def regestration():  # Регистрация
     form = RegisterForm()  # Форма
     if form.validate_on_submit():  # При нажатии
+        db_sess = db_session.create_session()  # Сессия
         if form.password.data != form.password_again.data:  # Если пароли не совподают
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Пароли не совпадают")  # Сообщаем об этом
-        db_sess = db_session.create_session()  # Сессия
-        if db_sess.query(User).filter(User.email == form.email.data).first():  # Проверка на наличие пользователя
+        elif db_sess.query(User).filter(User.email == form.email.data).first() or db_sess.query(User).filter(User.login == form.login.data).first():  # Проверка на наличие пользователя
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Такой пользователь уже есть")  # Сообщаем об этом
-        user = User(
-            login=form.login.data,
-            email=form.email.data
-        )  # Данные для сохранения
-        user.set_password(form.password.data)  # Задаем хеш-пароль
-        db_sess.add(user)  # Добавляем пользователя в базу
-        db_sess.commit()  # Сохраняем изменения
-        return redirect('/login')  # Перенаправяем на страницу входа
+        else:
+            user = User(
+                login=form.login.data,
+                email=form.email.data
+            )  # Данные для сохранения
+            user.set_password(form.password.data)  # Задаем хеш-пароль
+            db_sess.add(user)  # Добавляем пользователя в базу
+            db_sess.commit()  # Сохраняем изменения
+            return redirect('/login')  # Перенаправяем на страницу входа
     return render_template('registration.html', title='Регистрация', page='File Senior', form=form)
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-#@login_required
+@login_required
 def convert():  # Конвертация
     try:
         if request.method == 'POST':  # Нажатие

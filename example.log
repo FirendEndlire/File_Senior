@@ -1389,3 +1389,459 @@ FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'MATERIALS\\ASC
 2022-04-20 14:33:47,518 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
 2022-04-20 14:33:47,519 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
 2022-04-20 14:33:47,522 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:37:39,828 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:37:39] "POST /convert HTTP/1.1" 200 -
+2022-04-20 14:45:56,136 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:46:10,889 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:10] "GET / HTTP/1.1" 200 -
+2022-04-20 14:46:12,478 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:12] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:46:12,779 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:12] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:46:12,841 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:12] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:46:13,444 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:13] "GET / HTTP/1.1" 200 -
+2022-04-20 14:46:13,787 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:13] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:46:13,790 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:13] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:46:14,097 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:14] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:46:15,388 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 14:46:22,170 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:22] "GET / HTTP/1.1" 200 -
+2022-04-20 14:46:22,413 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:22] "GET / HTTP/1.1" 200 -
+2022-04-20 14:46:27,596 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:27] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:46:28,077 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:28] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:46:28,078 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:28] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:46:28,389 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:28] "GET /static_content/css/Login.css HTTP/1.1" 200 -
+2022-04-20 14:46:29,506 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:29] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:46:31,140 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:31] "GET /static_content/css/Login.css HTTP/1.1" 200 -
+2022-04-20 14:46:31,416 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:31] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:46:31,447 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:31] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:46:39,184 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:39] "GET /registration HTTP/1.1" 200 -
+2022-04-20 14:46:39,542 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:39] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:46:39,848 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:39] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:46:39,850 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:39] "GET /static_content/css/Registration.css HTTP/1.1" 200 -
+2022-04-20 14:46:41,299 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:41] "GET /registration HTTP/1.1" 200 -
+2022-04-20 14:46:42,887 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:42] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:46:43,198 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:43] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:46:43,241 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:43] "GET /static_content/css/Registration.css HTTP/1.1" 200 -
+2022-04-20 14:46:59,318 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:59] "GET / HTTP/1.1" 200 -
+2022-04-20 14:46:59,777 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:46:59] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:47:00,084 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:47:00] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:47:00,085 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:47:00] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:47:02,396 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:47:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 14:47:37,008 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:48:04,887 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:04] "GET / HTTP/1.1" 200 -
+2022-04-20 14:48:05,705 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:05] "GET / HTTP/1.1" 200 -
+2022-04-20 14:48:06,055 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:48:06,368 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:48:06,368 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:48:06,537 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:48:06,537 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:48:06,597 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:06] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:48:07,925 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 14:48:12,311 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:12] "GET / HTTP/1.1" 200 -
+2022-04-20 14:48:23,187 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:23] "GET / HTTP/1.1" 200 -
+2022-04-20 14:48:23,631 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:23] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:48:23,933 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:23] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 14:48:23,948 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:23] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 14:48:30,813 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 14:48:42,165 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:42] "GET /registration HTTP/1.1" 200 -
+2022-04-20 14:48:42,595 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:42] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:48:42,595 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:42] "GET /static_content/css/Registration.css HTTP/1.1" 200 -
+2022-04-20 14:48:42,908 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:48:42] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:11,858 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:11] "[32mPOST /registration HTTP/1.1[0m" 302 -
+2022-04-20 14:49:12,189 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:12] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:49:12,654 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:12] "GET /static_content/css/Login.css HTTP/1.1" 200 -
+2022-04-20 14:49:12,957 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:12] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:12,959 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:12] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:22,690 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:22] "POST /login HTTP/1.1" 200 -
+2022-04-20 14:49:23,137 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:23] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:23,451 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:23] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:23,452 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:23] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:34,010 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:34] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-20 14:49:34,336 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:34] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:49:34,795 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:34] "GET /static_content/css/Account.css HTTP/1.1" 200 -
+2022-04-20 14:49:35,106 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:35] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:35,107 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:35] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:37,151 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:37] "GET /change_login HTTP/1.1" 200 -
+2022-04-20 14:49:37,569 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:37] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:37,879 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:37] "GET /static_content/css/Change_login.css HTTP/1.1" 200 -
+2022-04-20 14:49:37,881 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:37] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:46,700 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:46] "[32mPOST /change_login HTTP/1.1[0m" 302 -
+2022-04-20 14:49:47,006 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:47] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:49:47,422 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:47] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:47,736 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:47] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:47,737 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:47] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:53,966 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:53] "GET /change_password HTTP/1.1" 200 -
+2022-04-20 14:49:54,407 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:54] "GET /static_content/css/Change_password.css HTTP/1.1" 200 -
+2022-04-20 14:49:54,714 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:54] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:49:54,715 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:49:54] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:00,955 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:00] "[32mPOST /change_password HTTP/1.1[0m" 302 -
+2022-04-20 14:50:01,268 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:01] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:50:01,686 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:01] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:01,996 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:01] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:02,028 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:02] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:06,368 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:06] "[32mGET /logout HTTP/1.1[0m" 302 -
+2022-04-20 14:50:06,679 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:06] "GET / HTTP/1.1" 200 -
+2022-04-20 14:50:07,112 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:07] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:07,444 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:07] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:07,444 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:07] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:10,086 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:10] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:50:10,504 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:10] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:10,806 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:10] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:10,823 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:10] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:17,443 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-20 14:50:17,752 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:17] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:50:18,178 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:18] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:18,492 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:18] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:18,493 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:18] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:21,272 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:21] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:50:21,681 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:21] "GET /static_content/css/Converter.css HTTP/1.1" 200 -
+2022-04-20 14:50:21,993 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:21] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:21,993 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:21] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:25,909 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:25] "POST /convert HTTP/1.1" 200 -
+2022-04-20 14:50:44,132 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:44] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:50:48,964 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:48] "[32mPOST /convert HTTP/1.1[0m" 302 -
+2022-04-20 14:50:49,270 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:49] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:50:49,731 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:49] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:50,062 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:50] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:50,064 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:50] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:52,022 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:52] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:50:52,546 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:52] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:52,850 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:52] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:52,851 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:52] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:56,103 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:56] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:50:56,542 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:56] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:56,866 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:56] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:50:56,867 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:50:56] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:00,723 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:00] "[32mPOST /convert HTTP/1.1[0m" 302 -
+2022-04-20 14:51:01,037 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:01] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:51:01,471 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:01] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:01,788 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:01] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:01,790 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:01] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:03,565 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:03] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:51:04,004 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:04] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:04,328 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:04] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:04,329 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:04] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:16,855 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:16] "[32mPOST /convert HTTP/1.1[0m" 302 -
+2022-04-20 14:51:17,163 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:17] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:51:17,623 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:17] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:17,934 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:17] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:17,935 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:17] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:19,926 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:19] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:51:20,375 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:20] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:20,681 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:20] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:20,682 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:20] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:22,565 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:22] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:51:22,965 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:22] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:23,281 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:23] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:23,284 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:23] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:24,696 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:24] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:51:25,100 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:25] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:25,415 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:25] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:25,416 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:25] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:27,952 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:27] "GET /change_login HTTP/1.1" 200 -
+2022-04-20 14:51:28,413 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:28] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:28,718 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:28] "[36mGET /static_content/css/Change_login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:28,718 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:28] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:32,472 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:32] "[32mPOST /change_login HTTP/1.1[0m" 302 -
+2022-04-20 14:51:32,792 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:32] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:51:33,224 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:33] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:33,534 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:33] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:33,550 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:33] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:35,507 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:35] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:51:36,031 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:36] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:36,365 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:36] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:36,365 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:36] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:39,944 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:39] "GET /change_password HTTP/1.1" 200 -
+2022-04-20 14:51:40,386 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:40] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:40,691 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:40] "[36mGET /static_content/css/Change_password.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:40,692 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:40] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:47,630 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:47] "[32mPOST /change_password HTTP/1.1[0m" 302 -
+2022-04-20 14:51:47,933 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:47] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:51:48,377 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:48] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:48,678 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:48] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:48,679 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:48] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:50,396 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:50] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:51:50,844 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:50] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:51,158 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:51] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:51,159 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:51] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:52,983 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:52] "GET /change_password HTTP/1.1" 200 -
+2022-04-20 14:51:53,432 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:53] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:53,747 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:53] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:51:53,748 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:51:53] "[36mGET /static_content/css/Change_password.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:03,950 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:03] "[32mPOST /change_password HTTP/1.1[0m" 302 -
+2022-04-20 14:52:04,307 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:04] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:52:04,766 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:04] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:05,078 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:05] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:05,079 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:05] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:06,782 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:06] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:52:07,265 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:07] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:07,580 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:07] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:07,581 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:07] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:14,540 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:14] "[32mGET /delete_account/TyukheTest HTTP/1.1[0m" 302 -
+2022-04-20 14:52:14,863 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:14] "GET / HTTP/1.1" 200 -
+2022-04-20 14:52:15,303 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:15] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:15,610 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:15] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:15,611 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:15] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:17,459 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:17] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:52:17,859 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:17] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:18,173 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:18] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:18,189 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:18] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:26,307 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:26] "POST /login HTTP/1.1" 200 -
+2022-04-20 14:52:26,745 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:26] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:27,056 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:27] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:52:27,057 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:52:27] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:05,800 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:05] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:53:06,233 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:06] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:06,548 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:06] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:06,549 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:06] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:13,763 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:13] "GET /registration HTTP/1.1" 200 -
+2022-04-20 14:53:14,193 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:14] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:14,508 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:14] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:14,509 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:14] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:53:30,997 ERROR main Exception on /registration [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.login
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "e:/Programms Codes/File_Senior/main.py", line 77, in regestration
+    db_sess.commit()  # Сохраняем изменения
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 633, in execute
+    uow,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 250, in save_obj
+    insert,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 1241, in _emit_insert_statements
+    execution_options=execution_options,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\sql\elements.py", line 327, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1508, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1863, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 2044, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.login
+[SQL: INSERT INTO users (login, email, hashed_password) VALUES (?, ?, ?)]
+[parameters: ('Tyukhe', 'DsaS@fddfs', 'pbkdf2:sha256:260000$IsWOZWZZNmT1jEgG$7239509d6f33be1d7c1860c86a3a1d670be4b9af072ea2301779a0739e7d4288')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-04-20 14:53:31,070 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:53:31] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2022-04-20 14:54:44,541 ERROR main Exception on /registration [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.login
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "e:/Programms Codes/File_Senior/main.py", line 77, in regestration
+    db_sess.commit()  # Сохраняем изменения
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 633, in execute
+    uow,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 250, in save_obj
+    insert,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 1241, in _emit_insert_statements
+    execution_options=execution_options,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\sql\elements.py", line 327, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1508, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1863, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 2044, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.login
+[SQL: INSERT INTO users (login, email, hashed_password) VALUES (?, ?, ?)]
+[parameters: ('Tyukhe', 'DsaS@fddfs', 'pbkdf2:sha256:260000$AA3E1mJjFjo9tgCM$ee386b54ddbc71494580d4145d2a187a4a76091be270816485ec05a772b0a449')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-04-20 14:54:44,542 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:54:44] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2022-04-20 15:01:22,320 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 15:01:45,566 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:45] "GET / HTTP/1.1" 200 -
+2022-04-20 15:01:46,729 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:46] "GET / HTTP/1.1" 200 -
+2022-04-20 15:01:47,074 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 15:01:47,178 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 15:01:47,180 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 15:01:47,314 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 15:01:47,388 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 15:01:47,389 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:47] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 15:01:49,028 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 15:01:53,680 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:01:53] "GET / HTTP/1.1" 200 -
+2022-04-20 15:02:00,537 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:00] "GET / HTTP/1.1" 200 -
+2022-04-20 15:02:00,950 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:00] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 15:02:01,260 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:01] "GET /static_content/css/Start.css HTTP/1.1" 200 -
+2022-04-20 15:02:01,261 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:01] "GET /static_content/css/Base.css HTTP/1.1" 200 -
+2022-04-20 15:02:04,163 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-04-20 15:02:04,345 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:04] "GET /registration HTTP/1.1" 200 -
+2022-04-20 15:02:04,783 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:04] "GET /static_content/css/Registration.css HTTP/1.1" 200 -
+2022-04-20 15:02:04,790 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:04] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:02:05,104 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:05] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:02:16,297 ERROR main Exception on /registration [POST]
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: users.login
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "e:/Programms Codes/File_Senior/main.py", line 78, in regestration
+    db_sess.commit()  # Сохраняем изменения
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 829, in commit
+    self._prepare_impl()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3363, in flush
+    self._flush(objects)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\session.py", line 3463, in _flush
+    flush_context.execute()
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 633, in execute
+    uow,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 250, in save_obj
+    insert,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\orm\persistence.py", line 1241, in _emit_insert_statements
+    execution_options=execution_options,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\sql\elements.py", line 327, in _execute_on_connection
+    self, multiparams, params, execution_options
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1508, in _execute_clauseelement
+    cache_hit=cache_hit,
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1863, in _execute_context
+    e, statement, parameters, cursor, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 2044, in _handle_dbapi_exception
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\base.py", line 1820, in _execute_context
+    cursor, statement, parameters, context
+  File "C:\Users\Firend\AppData\Local\Programs\Python\Python37\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.login
+[SQL: INSERT INTO users (login, email, hashed_password) VALUES (?, ?, ?)]
+[parameters: ('Tyukhe', 'sdvsd@dscd', 'pbkdf2:sha256:260000$K4EQuHCPyUVLbDn0$b31c087f66c61222a26015cd8ff88f5f0f6eba62979d199143d9ee408ddcf831')]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-04-20 15:02:16,302 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:02:16] "[35m[1mPOST /registration HTTP/1.1[0m" 500 -
+2022-04-20 15:11:28,134 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 15:12:53,470 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:53] "GET / HTTP/1.1" 200 -
+2022-04-20 15:12:54,217 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:54] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:12:54,527 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:54] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 15:12:54,528 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:54] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:12:56,201 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:56] "GET /registration HTTP/1.1" 200 -
+2022-04-20 15:12:56,667 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:56] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:12:56,974 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:56] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
+2022-04-20 15:12:56,974 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:12:56] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:14,494 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:14] "POST /registration HTTP/1.1" 200 -
+2022-04-20 15:13:14,932 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:14] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:15,242 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:15] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:15,257 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:15] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:41,541 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:41] "POST /registration HTTP/1.1" 200 -
+2022-04-20 15:13:41,963 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:41] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:42,297 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:42] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:42,298 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:42] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:47,703 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:47] "POST /registration HTTP/1.1" 200 -
+2022-04-20 15:13:48,118 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:48] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:48,444 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:48] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 15:13:48,475 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 15:13:48] "[36mGET /static_content/css/Registration.css HTTP/1.1[0m" 304 -
