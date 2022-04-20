@@ -1316,3 +1316,76 @@ FileNotFoundError: [WinError 2] Не удается найти указанный файл: 'MATERIALS\\ASC
 2022-04-20 12:45:33,691 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 12:45:33] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
 2022-04-20 12:45:34,177 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 12:45:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2022-04-20 12:45:34,487 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 12:45:34] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2022-04-20 14:25:50,850 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:25:59,943 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:25:59] "GET / HTTP/1.1" 200 -
+2022-04-20 14:25:59,960 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:25:59] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:25:59,961 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:25:59] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:25:59,964 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:25:59] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:03,234 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:03] "GET /login HTTP/1.1" 200 -
+2022-04-20 14:26:03,254 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:03] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:03,256 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:03] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:03,257 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:03] "[36mGET /static_content/css/Login.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:06,233 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2022-04-20 14:26:06,242 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:06] "GET /personal_page HTTP/1.1" 200 -
+2022-04-20 14:26:06,264 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:06] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:06,265 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:06] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:06,269 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:06] "[36mGET /static_content/css/Account.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:09,302 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:09] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:26:09,324 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:09] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:09,327 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:09] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:09,328 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:09] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:54,238 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:54] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:26:54,258 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:54] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:54,260 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:54] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:26:54,261 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:26:54] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:28:14,794 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:28:29,637 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:29] "GET / HTTP/1.1" 200 -
+2022-04-20 14:28:29,657 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:29] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:28:29,657 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:29] "GET /static_content/css/nicepage.css HTTP/1.1" 200 -
+2022-04-20 14:28:29,658 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:29] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 14:28:41,436 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:41] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:28:41,489 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:41] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:28:41,494 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:41] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:28:41,495 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:28:41] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:29:51,875 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:29:57,269 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:29:57] "GET / HTTP/1.1" 200 -
+2022-04-20 14:29:57,289 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:29:57] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:29:57,291 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:29:57] "[36mGET /static_content/css/Start.css HTTP/1.1[0m" 304 -
+2022-04-20 14:29:57,295 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:29:57] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:06,068 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:06] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:30:06,114 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:06] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:06,117 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:06] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:06,118 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:06] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:17,180 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:17] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:30:17,197 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:17] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:17,201 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:17] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:30:17,201 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:30:17] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:31:51,905 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:31:55,135 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:31:55] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:31:55,157 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:31:55] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:31:55,159 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:31:55] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:31:55,160 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:31:55] "GET /static_content/css/Converter.css HTTP/1.1" 200 -
+2022-04-20 14:32:06,046 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:32:06] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:32:06,060 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:32:06] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:32:06,062 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:32:06] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:32:06,063 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:32:06] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -
+2022-04-20 14:33:43,205 INFO werkzeug  * Running on all addresses (0.0.0.0)
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.50.171:5000 (Press CTRL+C to quit)
+2022-04-20 14:33:47,494 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "GET /convert HTTP/1.1" 200 -
+2022-04-20 14:33:47,518 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/nicepage.css HTTP/1.1[0m" 304 -
+2022-04-20 14:33:47,519 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/Base.css HTTP/1.1[0m" 304 -
+2022-04-20 14:33:47,522 INFO werkzeug 127.0.0.1 - - [20/Apr/2022 14:33:47] "[36mGET /static_content/css/Converter.css HTTP/1.1[0m" 304 -

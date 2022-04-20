@@ -80,7 +80,7 @@ def regestration():  # Регистрация
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-@login_required
+#@login_required
 def convert():  # Конвертация
     try:
         if request.method == 'POST':  # Нажатие
