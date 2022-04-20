@@ -1,16 +1,20 @@
 import os
 import logging  # логирование
-from flask_uploads import patch_request_class  # Библиотека для загрузки файлов
+
 from werkzeug.utils import redirect, secure_filename  # переадресация
+from core_scripts.convertering import conv_to_pdf  # Работа с апи
+
 from data_orm import db_session  # орм модели
 from data_orm.users import User  # орм модель пользоаптеля
+
+from flask_uploads import patch_request_class  # Библиотека для загрузки файлов
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user  # Регистрация пользователя
-from forms_templates.login import LoginForm
-from forms_templates.registation import RegisterForm
-from forms_templates.change_login import NewLoginForm
-from forms_templates.change_password import NewPasswordForm
 from flask import Flask, render_template, request, send_file  # Ну и сам фласк
-from core_scripts.convertering import conv_to_pdf
+
+from forms_templates.login import LoginForm  # Форма
+from forms_templates.registation import RegisterForm  # Форма
+from forms_templates.change_login import NewLoginForm  # Тоже Форма
+from forms_templates.change_password import NewPasswordForm  # И это тоже форма
 
 app = Flask(__name__, template_folder="html_templates",
             static_folder="static_content")  # Создаем приложение, меняем названия стандартных папок
@@ -55,7 +59,6 @@ def logout():  # Выход
     return redirect("/")
 
 
-
 @app.route("/registration", methods=['GET', 'POST'])
 def regestration():  # Регистрация
     form = RegisterForm()  # Форма
@@ -65,7 +68,8 @@ def regestration():  # Регистрация
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Пароли не совпадают")  # Сообщаем об этом
-        elif db_sess.query(User).filter(User.email == form.email.data).first() or db_sess.query(User).filter(User.login == form.login.data).first():  # Проверка на наличие пользователя
+        elif db_sess.query(User).filter(User.email == form.email.data).first() or db_sess.query(User).filter(
+                User.login == form.login.data).first():  # Проверка на наличие пользователя
             return render_template('registration.html', title='Регистрация', page='File Senior',
                                    form=form,
                                    message="Такой пользователь уже есть")  # Сообщаем об этом
@@ -97,14 +101,15 @@ def convert():  # Конвертация
                     os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
                     return redirect('/convert#error')  # Вызов сооющения об ошибке
                 conv_ret = conv_to_pdf(filename)
-                if(conv_ret != "ERROR"):
+                if conv_ret != "ERROR":
                     return send_file(conv_ret)
                 else:
                     return redirect('/convert#error')
             else:
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
         return render_template('Converter.html')
-    except: return redirect('/convert#error')
+    except:
+        return redirect('/convert#error')
 
 
 @app.route("/personal_page")
