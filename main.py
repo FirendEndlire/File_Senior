@@ -1,7 +1,6 @@
 import os
 import logging  # логирование
-from flask_uploads import UploadSet, configure_uploads, patch_request_class, \
-    UploadNotAllowed  # Библиотека для загрузки файлов
+from flask_uploads import patch_request_class  # Библиотека для загрузки файлов
 from werkzeug.utils import redirect, secure_filename  # переадресация
 from data_orm import db_session  # орм модели
 from data_orm.users import User  # орм модель пользоаптеля
@@ -80,16 +79,18 @@ def regestration():  # Регистрация
 
 
 @app.route("/convert", methods=['GET', 'POST'])
-# @login_required
+@login_required
 def convert():  # Конвертация
     if request.method == 'POST':  # Нажатие
         file = request.files['file']  # Получаем файл
         if file and file.filename.rsplit('.', 1)[1].lower() in ["doc", "docx", "xls", "xlsx", "ppt", "pptx", "jpg",
-                                                                "png", "tiff", "html"]:  # Проверяем наличие и формат
+                                                                "png", "tiff",
+                                                                "html"] and file.filename == secure_filename(
+            file.filename):  # Проверяем наличие и формат
             filename = secure_filename(file.filename)  # Имя файла получаем
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Сохраняем
             if os.stat(os.path.join(app.config['UPLOAD_FOLDER'],
-                                    filename)).st_size > 5 * 1024 * 1024:  # Проверка на размер
+                                    filename)).st_size > 100 * 1024 * 1024:  # Проверка на размер
                 os.remove(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # Удаляем большие файлы
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
         else:
