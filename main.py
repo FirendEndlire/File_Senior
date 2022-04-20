@@ -30,7 +30,7 @@ db_session.global_init("data_bases/users.db")  # Активируем орм
 
 @app.route("/")
 def index():  # Стартовая страница
-    return render_template('Start.html', title='File Senior', page='File Senior')
+    return render_template('Start.html', title='PDF Senior', page='PDF Senior')
 
 
 @app.route("/login", methods=['GET', 'POST'])
@@ -42,10 +42,10 @@ def login():  # Залогинивание
         if user and user.check_password(form.password.data):  # проверяем наличие пользователя и правильность пароля
             login_user(user, remember=True)  # Лошинем юзера
             return redirect("/personal_page")  # Перекидываем на персональную страницу
-        return render_template('login.html', title='File Senior', page='Авторизация',
+        return render_template('login.html', title='PDF Senior', page='PDF Senior',
                                message="Неправильный логин или пароль",
                                form=form)  # В случае ошибки сообщаем об этом
-    return render_template('login.html', title='Авторизация', page='File Senior', form=form)
+    return render_template('login.html', title='Авторизация', page='PDF Senior', form=form)
 
 
 @app.route('/logout')
@@ -62,11 +62,11 @@ def regestration():  # Регистрация
     if form.validate_on_submit():  # При нажатии
         db_sess = db_session.create_session()  # Сессия
         if form.password.data != form.password_again.data:  # Если пароли не совподают
-            return render_template('registration.html', title='Регистрация', page='File Senior',
+            return render_template('registration.html', title='Регистрация', page='PDF Senior',
                                    form=form,
                                    message="Пароли не совпадают")  # Сообщаем об этом
         elif db_sess.query(User).filter(User.email == form.email.data).first() or db_sess.query(User).filter(User.login == form.login.data).first():  # Проверка на наличие пользователя
-            return render_template('registration.html', title='Регистрация', page='File Senior',
+            return render_template('registration.html', title='Регистрация', page='PDF Senior',
                                    form=form,
                                    message="Такой пользователь уже есть")  # Сообщаем об этом
         else:
@@ -78,7 +78,7 @@ def regestration():  # Регистрация
             db_sess.add(user)  # Добавляем пользователя в базу
             db_sess.commit()  # Сохраняем изменения
             return redirect('/login')  # Перенаправяем на страницу входа
-    return render_template('registration.html', title='Регистрация', page='File Senior', form=form)
+    return render_template('registration.html', title='Регистрация', page='PDF Senior', form=form)
 
 
 @app.route("/convert", methods=['GET', 'POST'])
@@ -103,14 +103,14 @@ def convert():  # Конвертация
                     return redirect('/convert#error')
             else:
                 return redirect('/convert#error')  # Вызов сооющения об ошибке
-        return render_template('Converter.html')
+        return render_template('Converter.html', page='PDF Senior')
     except: return redirect('/convert#error')
 
 
 @app.route("/personal_page")
 @login_required
 def personal_page():  # Персональная страница
-    return render_template('Account.html', title='Личный кабинет', page='File Senior')
+    return render_template('Account.html', title='Личный кабинет', page='PDF Senior')
 
 
 @app.route("/change_login", methods=['GET', 'POST'])
